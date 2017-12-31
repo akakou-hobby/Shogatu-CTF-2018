@@ -15,13 +15,13 @@ flag['length'] = len(flag['data'])
 
 ### ボケる方のファイル
 boke = {
-    'file': open('boke', 'wb'),         # ファイル
+    'file': open('../boke', 'wb'),         # ファイル
     'data': bytes()                     # データ
 }
 
 ### 普通の方のファイル
 hutsu = {
-    'file': open('hutsu', 'wb'),        # ファイル
+    'file': open('../hutsu', 'wb'),        # ファイル
     'data': bytes()                     # データ
 }
 
