@@ -27,16 +27,16 @@ hutsu = {
 
 ''' ファイルの切り分け '''
 for count, data in enumerate(flag['data']):
-    if (count + 1) % 3 == 0 or '3' in str(count):
+    if (count + 1) % 3 == 0 or '3' in str(count + 1):
         ### ボケる場合
-        boke['data'] += data.to_bytes(2, 'little')
+        boke['data'] += data.to_bytes(1, 'little')
         message = 'boke'
     else:
         ### ボケない場合
-        hutsu['data'] += data.to_bytes(2, 'little')
+        hutsu['data'] += data.to_bytes(1, 'little')
         message = ''
 
-    print('{0}/{1} {2} !'.format(count, flag['length'], message))
+    print('{0}/{1} {2} !'.format(count + 1, flag['length'] + 1, message))
 
 ''' ファイルの保存 '''
 boke['file'].write(boke['data'])
